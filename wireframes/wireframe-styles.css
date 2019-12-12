@@ -69,7 +69,7 @@ h1{
     border: 1px solid black;
     vertical-align: middle;
     display: block;
-    padding: 2%;
+    padding: 5%;
     text-align: center;
 }
 
@@ -83,13 +83,26 @@ h1{
     padding: 2%;
 }
 
-#componentContainer{
+#viewMoreButton{
     width: auto;
+    height: auto;
+    top: 5px;
+    border: 1px solid black;
+    vertical-align: middle;
+    display: inline;
+    padding: 1%;
+    grid-row-gap: 1em;
+}
+
+#componentContainer{
+    width: 100%;
     height: auto;
     margin: auto;
     vertical-align: middle;
     text-align: center;
-    display: inline-flex;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 1em;
 }
 
 #article-Full {
