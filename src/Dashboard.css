@@ -1,0 +1,67 @@
+* {
+    height: 100%;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+        align-items: center;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    background: white;
+}
+
+#dashboardContainer, main{
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+}
+
+div {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    display: block;
+}
+
+#ArticleList{
+    position: absolute;
+    width: 60%;
+    height: auto;
+    left: 0;
+    margin: 0;
+   
+}
+
+h3{
+    height: auto;
+}
+
+#Header {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+top:0;
+background: black;
+color: white;
+}
+
+h1{
+    height: auto;
+}
+
+navbar {
+    width: 100%;
+}
+
+#navbar {
+    width: 100%;
+    height: 30px;
+    position: sticky;
+    background: rgb(65, 65, 65);
+color: white;
+}
