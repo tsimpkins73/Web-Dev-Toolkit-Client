@@ -10,17 +10,24 @@ export default class Dashboard extends React.Component {
         this.state = {
             resources:
                 [
-                    {
-                        Tutorials: [{ id: "1", headline: "a string", summary: "resource 1 summary is a summary iof resource 1. This will hold a small snippet of the resource's text", text: "", comments: [""], categories: ["Tutorial"], image: "IMAGE 1 URL", favorite: false },]
+                    {id:"1",
+                        name: "Tutorials",
+                        data: [{ id: "1", headline: "a string", summary: "resource 1 summary is a summary iof resource 1. This will hold a small snippet of the resource's text", text: "", comments: [""], categories: ["Tutorial"], image: "IMAGE 1 URL", favorite: false },]
                     },
                     {
-                        Videos: [{ id: "2", headline: "another string", summary: "resource 2 summary is a summary iof resource 2. This will hold a small snippet of the resource's text", text: "", comments: [""], categories: ["News", "New Technology"], image: "IMAGE 2 URL", favorite: true },]
+                        id:"2",
+                        name: "Videos",
+                        data: [{ id: "2", headline: "another string", summary: "resource 2 summary is a summary iof resource 2. This will hold a small snippet of the resource's text", text: "", comments: [""], categories: ["News", "New Technology"], image: "IMAGE 2 URL", favorite: true },]
                     },
                     {
-                        Courses: [{ id: "3", headline: "a string", summary: "resource 3 summary is a summary iof resource 3. This will hold a small snippet of the resource's text", text: "", comments: [""], categories: ["Tutorial"], image: "IMAGE 3 URL", favorite: true },]
+                        id:"3",
+                        name: "Courses",
+                        data: [{ id: "3", headline: "a string", summary: "resource 3 summary is a summary iof resource 3. This will hold a small snippet of the resource's text", text: "", comments: [""], categories: ["Tutorial"], image: "IMAGE 3 URL", favorite: true },]
                     },
                     {
-                        Utilities: [{ id: "3", headline: "a string", summary: "resource 3 summary is a summary iof resource 3. This will hold a small snippet of the resource's text", text: "", comments: [""], categories: ["Tutorial"], image: "IMAGE 3 URL", favorite: true },]
+                        id:"4",
+                        name: "Utilities",
+                        data: [{ id: "3", headline: "a string", summary: "resource 3 summary is a summary iof resource 3. This will hold a small snippet of the resource's text", text: "", comments: [""], categories: ["Tutorial"], image: "IMAGE 3 URL", favorite: true },]
                     },
 
                 ]

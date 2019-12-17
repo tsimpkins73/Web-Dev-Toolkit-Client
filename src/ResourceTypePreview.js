@@ -11,7 +11,8 @@ export default class ResourceTypePreview extends React.Component {
         let resourceType = this.props.resourceType
         return (
             <section id="resourceList">
-                {resourceType.filter(function (resource) {
+                <h1>{resourceType.name}</h1>
+                {resourceType.data.map(function (resource) {
                     return <ResourceTypeView resource={resource} />;
                 })}
             </section>
