@@ -9,7 +9,7 @@ export default class ResourceTypeView extends React.Component {
     render() {
         console.log(this.props.resource);
         return (
-            <div id="resource-full-container" >
+            <div id="resource-full" >
                 <section id="resource-Full">
                     <div id="resourceImage">{this.props.resource.image}</div>
                     <div id="resourceText">
