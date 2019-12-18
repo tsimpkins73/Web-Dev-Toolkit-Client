@@ -7,8 +7,8 @@ export default class ResourceList extends React.Component {
 
     render() {
         let resourceType = this.props.resourceType
-        if (this.props.searchterm) {
-            resources = this.props.resources.filter(resource => resource.text.indexOf(this.props.searchterm) >= 0)
+        if (this.state.showFavorites) {
+            resourceType = this.props.resourceType.filter(resource => resource.data.favorite)
         }
         return (
             <section id="resourceList">
