@@ -124,6 +124,16 @@ body {
   top:0;
   border: 2px solid black;
   }
+
+  #navLink{
+    color: white;
+    padding: 2%;
+}
+
+navbar {
+  width: 100%;
+  grid-template-columns: 2fr 2fr 2fr;
+}
   
   h1{
     height: auto;
@@ -196,6 +206,7 @@ body {
     padding: 3%;
   }
 
+  
 
 .resource-section-headline{
     font-size: 1.5em;

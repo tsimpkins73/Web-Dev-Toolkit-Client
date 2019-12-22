@@ -30,3 +30,16 @@ body{
     vertical-align: middle;
     display: inline-block;
 }
+
+#lp-resource-component-container{
+    width: auto;
+    height: auto;
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 1.5em;
+    grid-column-gap: 1em;
+    padding: 3%;
+  }

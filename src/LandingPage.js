@@ -12,14 +12,37 @@ export default class LandingPage extends React.Component {
           <Link to="/sign-up"><button>Sign Up</button></Link>
           <Link to="/login"><button>Login</button></Link>
           </div>
-          <div class="lpArticlet">
-            <h1 id="HeaderText">Newest Blog Post</h1>
-            <div id="articleImage"></div>
-            <div id="articleText">
-                <h3>Article Headline</h3>
-                <p>Article Text</p>
+          <section id="resourceList">
+          <div id="lp-resource-component-container" >
+            <div id="resource" ><h1>Resource Type 1</h1>
+            <div id="componentImage"></div>
+            <div id="componentDescription">
+                                <p>Component Description</p>
             </div>
-          </div>
+            </div>
+        
+            <div id="resource" ><h1>Resource Type 2</h1>
+            <div id="componentImage"></div>
+            <div id="componentDescription">
+                                <p>Component Description</p>
+            </div>
+        </div>
+    
+            <div id="resource" ><h1>Resource Type 3</h1>
+            <div id="componentImage"></div>
+            <div id="componentDescription">
+                                <p>Component Description</p>
+            </div>
+        </div>
+    
+            <div id="resource" ><h1>Resource Type 4</h1>
+            <div id="componentImage"></div>
+            <div id="componentDescription">
+                                <p>Component Description</p>
+            </div>
+        </div>
+    </div>
+          </section>
         </div>
       </section>
     );

@@ -1,10 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
-import './ResourceView.css'
-=======
 import './ResourceTypeView.css'
 import './ResourceTypeList.css'
->>>>>>> c34f882f802eef15e80ef308621039fe2e69dbb4
 import { Link } from 'react-router-dom';
 
 export default class ResourcePreview extends React.Component {
