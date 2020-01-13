@@ -4,6 +4,7 @@ import LandingPage from './LandingPage.js'
 import LoginForm from './LoginForm.js'
 import SignUpForm from './SignUpForm.js'
 import Dashboard from './Dashboard.js'
+import { API_BASE_URL } from './config'
 
 
 export default class App extends React.Component {
@@ -64,13 +65,11 @@ clearUser = () => {
      });
   }
 
-  getResourcesForTypes = (type) => {
-    let selectedType = this.state.types.find(c => (c.name=== type))
-    let typeID = selectedType.id
-    fetch(`${API_BASE_URL}/resources/types/${typeID}`)
+/*   getResourcesForTypes = () => {
+    fetch(`${API_BASE_URL}/resourcesTypes/`)
       .then(response => response.json())
       .then((typeResources) => { this.setState({ typeResources }); });
-  }
+  } */
 
   getResources() {
     fetch(`${API_BASE_URL}/resources`)
@@ -90,8 +89,8 @@ clearUser = () => {
 }
 
   componentDidMount() {
-    this.getArticles();
-    this.getResourcesForTypes();
+    this.getResources();
+    this.getTypes();
     this.getUsers();
     if(localStorage["user"]){
       const user = JSON.parse(localStorage["user"]);
@@ -100,17 +99,18 @@ clearUser = () => {
   }
 
   render() {
+    console.log(this.state.types);
+    console.log(this.state.resources);
+    console.log(this.state.types);
     return (
     <main className='App'>
       <BrowserRouter>
         <Route exact path={'/'} component={LandingPage} />
         <Route path={'/login'} component={LoginForm} />
         <Route path={'/sign-up'} component={SignUpForm} />
-        <Route path={'/dashboard'} render={(props) => <Dashboard {...props} handleArticleButton={this.handleArticleButton} users={this.state.users} resources={this.state.resources} searchterm={this.state.searchterm} currentUser={this.state.currentUser} types={this.state.types} handleSearchForm={this.handleSearchForm} handleFavoriteButton={this.handleFavoriteButton} clearUser={this.clearUser} currentresource={this.state.currentArticle} />} />
+        <Route path={'/dashboard'} render={(props) => <Dashboard {...props} handleArticleButton={this.handleArticleButton} users={this.state.users} resources={this.state.resources} types={this.state.types} searchterm={this.state.searchterm} currentUser={this.state.currentUser} types={this.state.types} handleSearchForm={this.handleSearchForm} handleFavoriteButton={this.handleFavoriteButton} clearUser={this.clearUser} currentresource={this.state.currentArticle} />} />
       </BrowserRouter>
     </main>
   );
 }
 }
-
-export default App;

@@ -2,6 +2,7 @@ import React from 'react'
 import './css/ResourceTypeView.css'
 import ResourceTypeView from "./ResourceTypeView.js";
 import { Link } from 'react-router-dom';
+import { API_BASE_URL } from './config'
 
 export default class ResourceTypePreview extends React.Component {
     constructor(props, context) {
@@ -14,7 +15,6 @@ export default class ResourceTypePreview extends React.Component {
 
 
     getResourcesForTypes = (typeID) => {
-        let typeID = typeID
         fetch(`${API_BASE_URL}/resources/byType/${typeID}`)
           .then(response => response.json())
           .then((typeResources) => { this.setState({ typeResources }); });
@@ -22,7 +22,8 @@ export default class ResourceTypePreview extends React.Component {
 
       componentDidMount() {
       let resourceType = this.props.resourceType;
-      this.getResourcesForTypes(resourceType.id)
+      this.getResourcesForTypes(resourceType.id);
+      }
 
     render(props) {
         console.log(this.props.resourceType);
