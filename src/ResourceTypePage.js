@@ -30,12 +30,16 @@ export default class ResourceTypePreview extends React.Component {
         }
     };
 
+    componentWillReceiveProps(newProps) {
+        if(newProps.resourceType !== this.props.resourceType){
+            this.getResourcesForTypes(newProps.resourceType.id);
+        }
+
+    }
 
     render(props) {
         console.log(this.props.resourceType);
         let resourceType = this.props.resourceType;
-        let resourceForTypes = this.props.resourceForTypes;
-        let thisTypeResourceIDs = resourceType.filter(type => type.id == resourceForTypes.type_id);
         let typeResources = this.state.typeResources;
         return (
             <section id="resource-full-container">
