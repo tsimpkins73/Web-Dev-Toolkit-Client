@@ -16,10 +16,9 @@ export default class App extends React.Component {
       resourcesForTypes: [],
       typeResources: [],
       searchterm: '',
-      searchArticles: [],
+      searchResources: [],
       currentUser: {},
       users: [],
-      currentArticle:{}
     };
   }
 
@@ -104,9 +103,9 @@ clearUser = () => {
     return (
     <main className='App'>
       <BrowserRouter>
-        <Route exact path={'/'} component={LandingPage} />
-        <Route path={'/login'} component={LoginForm} />
-        <Route path={'/sign-up'} component={SignUpForm} />
+        <Route exact path={'/'} render={(props) => <LandingPage {...props} resources={this.state.resources}  handleFavoriteButton={this.handleFavoriteButton} clearUser={this.clearUser} currentresource={this.state.currentArticle} />} />
+        <Route path={'/login'} render={(props) => <LoginForm onLoginSuccess={this.onLoginSuccess} {...props} />} />
+          <Route path={'/sign-up'} component={SignUpForm} />
         <Route path={'/dashboard'} render={(props) => <Dashboard {...props} handleArticleButton={this.handleArticleButton} users={this.state.users} resources={this.state.resources} types={this.state.types} searchterm={this.state.searchterm} currentUser={this.state.currentUser} types={this.state.types} handleSearchForm={this.handleSearchForm} handleFavoriteButton={this.handleFavoriteButton} clearUser={this.clearUser} currentresource={this.state.currentArticle} />} />
       </BrowserRouter>
     </main>
