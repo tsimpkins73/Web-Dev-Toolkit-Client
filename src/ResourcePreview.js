@@ -13,9 +13,9 @@ export default class ResourcePreview extends React.Component {
             <section id="resource">
                 <div id="resourceImage"><img id="previewImage" alt={"Headline Image for " + resource.headline} src={resource.image} /></div>
                 <div id="resourceText">
-                    <h3 id="resourceText">{this.props.resource.name}</h3>
-                    <p id="resourceText">{this.props.resource.summary}</p>
-                    <Link to={this.props.resource.url}><button>Go to Resource</button></Link>
+                    <h3 id="resourceText">{resource.name}</h3>
+                    <p id="resourceText">{resource.summary}</p>
+                    <Link to={resource.url}><button>Go to Resource</button></Link>
                 </div>
             </section>
                 );
