@@ -1,7 +1,7 @@
 {
     "version": 2,
-    "name": "webdevtoolkit",
-    "public": false,
+    "name": "Web-Dev-Toolkit-Client",
+    "public": true,
     "builds": [
       { "src": "package.json", "use": "@now/static-build", 
     "config": {"distDir":"build"} }
