@@ -6,7 +6,6 @@ import SignUpForm from './SignUpForm.js'
 import Dashboard from './Dashboard.js'
 import { API_BASE_URL } from './config'
 
-
 export default class App extends React.Component {
   constructor(props, context) {
     super(props, context);
