@@ -1,6 +1,6 @@
 import React from 'react'
 import ResourcePreview from "./ResourcePreview.js";
-import './ResourceTypeList.css'
+import './css/ResourceTypeList.css'
 
 export default class ResourceList extends React.Component {
 

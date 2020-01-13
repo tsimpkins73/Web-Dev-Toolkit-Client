@@ -1,6 +1,6 @@
 
 import React from 'react'
-import './ResourceTypeView.css'
+import './css/ResourceTypeView.css'
 
 export default class ResourceTypeView extends React.Component {
 
@@ -8,13 +8,16 @@ export default class ResourceTypeView extends React.Component {
 
     render() {
         console.log(this.props.resource);
+        let resource = this.props.resource
+/*         let typeResources= this.props.typeResources
+        let currentResource = resources.filter(resource = resource.id == resourceID)  */
         return (
             <div id="resource-full" >
                 <section id="resource-Full">
-                    <div id="resourceImage">{this.props.resource.image}</div>
+                    <div id="resourceImage">{resource.image}</div>
                     <div id="resourceText">
-                        <h3 id="resourceText">{this.props.resource.headline}</h3>
-                        <p id="resourceText">{this.props.resource.text}</p>
+                        <h3 id="resourceText">{resource.headline}</h3>
+                        <p id="resourceText">{resource.summary}</p>
                     </div>
                     <div id="resourceButtons">
                         <button onClick={this.props.handleFavoriteButton}>Favorite Button</button>

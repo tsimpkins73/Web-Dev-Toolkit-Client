@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import './Sidebar.css'
+import './css/Sidebar.css'
 
 export default class FavoritesLink extends React.Component {
     render() {

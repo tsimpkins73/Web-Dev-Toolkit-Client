@@ -1,5 +1,5 @@
 import React from 'react'
-import './Content.css'
+import './css/Content.css'
 
 export default class LPContainer extends Component {
     render(){

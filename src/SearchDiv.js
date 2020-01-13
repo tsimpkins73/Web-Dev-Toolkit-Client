@@ -1,5 +1,5 @@
 import React from 'react'
-import './Sidebar.css'
+import './css/Sidebar.css'
 
 export default class SearchDiv extends React.Component {
     render() {
