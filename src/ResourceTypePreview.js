@@ -22,6 +22,7 @@ export default class ResourceTypePreview extends React.Component {
 
       componentDidMount() {
       let resourceType = this.props.resourceType;
+      console.log(resourceType.id);
       this.getResourcesForTypes(resourceType.id);
       }
 
@@ -35,7 +36,7 @@ export default class ResourceTypePreview extends React.Component {
             <section id="resource-full-container">
                 <h1 class="resource-section-headline">{resourceType.name}</h1>
                 <section id="resource-component-container">
-                {typeResources.data.slice(0, 4).map(function (resource) {
+                {typeResources.slice(0, 4).map(function (resource) {
                     return <ResourceTypeView resource={resource} />;
                 })}
                   </section>
