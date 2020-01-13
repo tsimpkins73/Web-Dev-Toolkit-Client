@@ -14,7 +14,7 @@ export default class ResourceTypeView extends React.Component {
         return (
             <div id="resource-full" >
                 <section id="resource-Full">
-                    <div id="resourceImage"><img id="previewImage" alt={"Headline Image for " + resource.headline} src={resource.image} />/div>
+                    <div id="resourceImage"><img id="previewImage" alt={"Headline Image for " + resource.headline} src={resource.image} /></div>
                     <div id="resourceText">
                         <h3 id="resourceText">{resource.headline}</h3>
                         <p id="resourceText">{resource.summary}</p>
