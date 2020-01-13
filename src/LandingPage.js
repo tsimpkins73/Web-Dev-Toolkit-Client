@@ -4,7 +4,7 @@ import './css/LandingPage.css'
 
 export default class LandingPage extends React.Component {
   render() {
-    let resources = this.state.resources;
+    let resources = this.props.resources;
     console.log(resources);
     return (
       <section class="LandingContainer">
