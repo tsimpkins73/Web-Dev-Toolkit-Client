@@ -100,9 +100,7 @@ h1{
 #resource{
   width: auto;
   height: auto;
-  margin: auto;
- 
-  vertical-align: middle;
+  margin: 0;
   display: block;
   padding: 5%;
   text-align: center;
@@ -158,7 +156,7 @@ h1{
   display: inline-block;
 }
 
-#articleText {
+#resourceText {
   width: 70%;
   display: inline-block;
   height: auto;
