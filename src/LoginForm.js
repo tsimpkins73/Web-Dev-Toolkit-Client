@@ -32,7 +32,7 @@ export default class LoginForm extends React.Component {
 
 
     return (
-      <section class="LandingContainer">
+      <section class="LoginContainer">
         <div class="LoginForm" > 
         <div class="loginFormHeader">
           <h1 class="lpHeaderText"> Welcome, Please Sign In! </h1>

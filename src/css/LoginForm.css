@@ -35,7 +35,6 @@ div{
 
 .LoginForm{
     display: inline-grid;
-    height: 70vh;
     grid-template-rows: 1fr 2fr;
 }
 
