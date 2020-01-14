@@ -232,15 +232,22 @@ div {
   display: block;
 }
 
-button {
+button, .resource-button {
   display: inline-block;
-  width: 200px;
-  padding: 2px;
-  margin-top: 10px;
+  width: auto;
+  padding: 5px;
+  margin-top: 20px;
   margin-bottom: 10px;
   margin: auto;
   height: 40px;
   vertical-align: middle;
+  background: rgb(253, 225, 183);
+  border-style: none;
+  text-decoration: none;
+  font-style: initial;
+}
+a:link, a:visited{
+  text-decoration: none;
 }
 
 .newestPost {

@@ -10,6 +10,7 @@ export default class ResourceTypePreview extends React.Component {
 
         this.state = {
             typeResources: [],
+            resourceType:''
         };
     }
 
@@ -22,28 +23,34 @@ export default class ResourceTypePreview extends React.Component {
 
     componentDidMount() {
         let resourceType = this.props.resourceType;
-        if (this.props.resourceTypeName == 'Favorites') {
-            this.setState({ typeResources: this.props.favoriteResources })
+        if (this.props.favoriteResources) {
+            this.setState({ typeResources: this.props.favoriteResources,
+            resourceType:"Favorites" })
         }
         else {
             this.getResourcesForTypes(resourceType.id);
+            this.setState({ resourceType: this.props.resourceType.name })
         }
     };
 
     componentWillReceiveProps(newProps) {
-        if(newProps.resourceType !== this.props.resourceType){
+        if(newProps.favoriteResources){
+            this.setState(this.setState({ typeResources: this.props.favoriteResources }))
+        }if(newProps.resourceType !== this.props.resourceType){
             this.getResourcesForTypes(newProps.resourceType.id);
+        }else{
+            this.getResourcesForTypes(this.props.resourceType.id);
         }
 
     }
 
     render(props) {
         console.log(this.props.resourceType);
-        let resourceType = this.props.resourceType;
+        let resourceType = this.state.resourceType;
         let typeResources = this.state.typeResources;
         return (
             <section id="resource-full-container">
-                <h1 class="resource-section-headline">{resourceType.name}</h1>
+                <h1 class="resource-section-headline">{resourceType}</h1>
                 <section id="resource-component-container">
                     {typeResources.map(function (resource) {
                         return <ResourceTypeView resource={resource} handleFavoriteButton={() => this.props.handleFavoriteButton(resource)} />;

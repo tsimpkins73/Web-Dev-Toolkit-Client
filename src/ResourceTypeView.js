@@ -1,10 +1,14 @@
 
 import React from 'react'
 import './css/ResourceTypeView.css'
+import { Link } from 'react-router-dom';
 
 export default class ResourceTypeView extends React.Component {
 
-
+handleURLButton = (resourceURL) => {
+        window.location.href= resourceURL;
+    
+}
 
     render() {
         console.log(this.props.resource);
@@ -19,13 +23,10 @@ export default class ResourceTypeView extends React.Component {
                         <p id="resourceText">{resource.summary}</p>
                     </div>
                     <div id="resourceButtons">
-                        <button onClick={this.props.handleFavoriteButton}>Favorite Button</button>
+               <button onClick={this.handleURLButton.bind(this, resource.url)} >Go to Resource</button><button onClick={this.props.handleFavoriteButton}>Favorite Button</button>
                     </div>
                 </section>
         );
     }
 }
 
-/* resourceView.defaultProps = {
-    resource: {}
-} */

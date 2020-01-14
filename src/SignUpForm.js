@@ -52,7 +52,8 @@ export default class SignUpForm extends React.Component {
                         <p id="passwordDesc" >Password must be at least 8 characters, and
     must contain one upper case, lower case, number and special character
 </p>
-                        <div className='signupButtons'> <button className="lpButton" type="submit">Submit</button>
+<div id="resourceButtons">
+    <button className="lpButton" type="submit">Submit</button>
                             <Link to="/login"><button className="lpButton">Login</button></Link>
                         </div>
 

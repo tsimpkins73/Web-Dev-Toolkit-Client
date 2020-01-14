@@ -37,14 +37,6 @@ clearUser = () => {
     });
   }
 
-  handleArticleButton = (article_id) => {
-    let articleId = article_id
-    let articles = this.state.articles
-    let article = (articles.find(a => (a.id == articleId)))
-    console.log(article);
-    this.setState({ currentArticle: article });
-  }
-
   handleSearchForm = (event) => {
     event.preventDefault();
     const term = event.currentTarget.searchTerm.value;
@@ -52,6 +44,7 @@ clearUser = () => {
       searchterm: term
     });
   }
+  
 
   onLoginSuccess = (username) => {
     console.log(username);

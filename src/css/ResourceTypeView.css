@@ -61,3 +61,11 @@ div {
     margin-top: auto;
     display: block;
 }
+
+#resourceButtons{
+    padding: 5%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    height: auto;
+}
