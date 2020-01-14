@@ -1,26 +1,64 @@
 import React from 'react'
 import './css/SignUpForm.css'
 import { Link } from 'react-router-dom';
+import UserService from './services/user-service'
+
 
 export default class SignUpForm extends React.Component {
-    render() {
+    static defaultProps = {
+        onRegistrationSuccess: () => { }
+    }
+
+    state = { error: null }
+
+    handleSubmit = ev => {
+        ev.preventDefault()
+        const { name, username, password } = ev.target
+
+        this.setState({ error: null })
+        UserService.postUser({
+            username: username.value,
+            password: password.value,
+            name: name.value,
+        })
+            .then(user => {
+                name.value = ''
+                username.value = ''
+                password.value = ''
+                this.props.onRegistrationSuccess()
+                this.props.history.push('/dashboard')
+            })
+            .catch(res => {
+                this.setState({ error: res.error })
+            })
+    }
+
+     render() {
+        let handleSubmit=this.handleSubmit;
         return (
-            <section class="LandingContainer">
-                <div class="SignUpForm"><h1 id="HeaderText">Signup Form Header</h1>
-                    <label for="Name">Name</label>
-                    <input type="text" /> 
-                    <label for="Email">Email</label>
-                    <input type="text" /> 
-                    <label for="Username">Username</label>
-                    <input type="text" /> 
-                    <label for="Password">Password</label>
-                    <input type="text" /> 
-                    </div>
-                    <div>
-                    <Link to="/dashboard"><button>Submit</button></Link>
-          <Link to="/login"><button>Login</button></Link>
+            <section className="LoginContainer">
+                <div className="SignUpForm">
+                <div class="loginFormHeader"><h1 className="lpHeaderText">Please Sign Up to Join theConsole</h1></div>
+                    <form className='RegistrationForm' onSubmit={handleSubmit} >
+                        <div className='formLine'> <label htmlFor="Name">Name</label>
+                            <input type="text" name="name" />
+                        </div>
+                        <div className='formLine'> <label htmlFor="Username">Email</label>
+                            <input type="email" name="username" />
+                        </div>
+                        <div className='formLine'> <label htmlFor="Password">Password</label>
+                            <input type="text" name="password" />
+                        </div>
+                        <p id="passwordDesc" >Password must be at least 8 characters, and
+    must contain one upper case, lower case, number and special character
+</p>
+                        <div className='signupButtons'> <button className="lpButton" type="submit">Submit</button>
+                            <Link to="/login"><button className="lpButton">Login</button></Link>
+                        </div>
+
+                    </form>
+                    <div>{this.state.error}</div>
                 </ div>
             </ section>
-        );
-    }
+        )};
 }

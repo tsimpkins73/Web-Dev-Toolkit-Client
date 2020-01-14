@@ -101,6 +101,7 @@ h1{
   width: auto;
   height: auto;
   margin: 0;
+  font-size:initial;
   display: block;
   padding: 5%;
   text-align: center;
@@ -109,8 +110,8 @@ h1{
 #resource-full{
   width: auto;
   height: auto;
-  margin: auto;
- 
+  margin: 0;
+ font-size:initial;
   vertical-align: middle;
   display: inline;
   padding: 2%;
@@ -157,10 +158,11 @@ h1{
 }
 
 #resourceText {
-  width: 70%;
   display: inline-block;
   height: auto;
-  margin: auto;
+  margin: 0;
+  font-size:initial;
+  color: white;
 }
 
 #articleText-Full {
@@ -230,8 +232,7 @@ div {
   display: block;
 }
 
-
-.button {
+button {
   display: inline-block;
   width: 200px;
   padding: 2px;
@@ -239,7 +240,6 @@ div {
   margin-bottom: 10px;
   margin: auto;
   height: 40px;
- 
   vertical-align: middle;
 }
 

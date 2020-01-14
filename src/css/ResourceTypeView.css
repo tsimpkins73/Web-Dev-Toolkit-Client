@@ -54,39 +54,6 @@
     margin: auto;
 }
 
-#articleText-Full {
-    width: 70%;
-    display: inline-block;
-    height: 400px;
-    margin: auto;
-    background: white;
-}
-
-#articleButtons {
-    height: auto;
-    padding: 10px;
-    background: white;
-}
-
-#articleComments {
-    height: auto;
-}
-
-#articleComment {
-    height: 50px;
-    background: gray;
-    text-align: left;
-    padding: 10px;
-}
-
-#addComment {
-    height: 100px;
-}
-
-#newComment {
-    height: 150px;
-    margin: 10px;
-}
 
 div {
     margin-left: auto;

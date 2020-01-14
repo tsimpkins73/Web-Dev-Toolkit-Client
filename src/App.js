@@ -97,9 +97,9 @@ clearUser = () => {
   }
 
   render() {
-    console.log(this.state.types);
     console.log(this.state.resources);
     console.log(this.state.types);
+    console.log(this.state.users);
     return (
     <main className='App'>
       <BrowserRouter>
