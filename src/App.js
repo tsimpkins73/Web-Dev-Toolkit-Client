@@ -5,6 +5,7 @@ import LoginForm from './LoginForm.js'
 import SignUpForm from './SignUpForm.js'
 import Dashboard from './Dashboard.js'
 import { API_BASE_URL } from './config'
+require('dotenv').config();
 
 export default class App extends React.Component {
   constructor(props, context) {

@@ -12,6 +12,7 @@
     "react"
   ],
   "dependencies": {
+    "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "jwt-decode": "^2.2.0",
@@ -51,5 +52,7 @@
     "gh-pages": "^2.1.1",
     "jest-summarizing-reporter": "^1.1.2"
   },
-  "engines": { "node": "12.x" }
+  "engines": {
+    "node": "12.x"
+  }
 }

@@ -27,19 +27,32 @@ export default class ResourceTypePreview extends React.Component {
             this.setState({ typeResources: this.props.favoriteResources,
             resourceType:"Favorites" })
         }
+        if (this.props.searchTerm) {
+            this.setState({ typeResources: this.props.searchResources,
+            resourceType:"Results"})
+        }
         else {
             this.getResourcesForTypes(resourceType.id);
             this.setState({ resourceType: this.props.resourceType.name })
         }
     };
 
+    componentDidUnmount() {
+        this.props.clearSpecialResources();
+    }
+
     componentWillReceiveProps(newProps) {
         if(newProps.favoriteResources){
             this.setState(this.setState({ typeResources: this.props.favoriteResources }))
+        }if(newProps.searchResources) {
+            this.setState(this.setState({ typeResources: this.props.searchResources }))
         }if(newProps.resourceType !== this.props.resourceType){
             this.getResourcesForTypes(newProps.resourceType.id);
-        }else{
+        }if(this.props.resourceType){
             this.getResourcesForTypes(this.props.resourceType.id);
+        }
+        else{
+            this.setState(this.setState({ typeResources: []}))
         }
 
     }
