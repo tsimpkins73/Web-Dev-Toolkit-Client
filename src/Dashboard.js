@@ -19,7 +19,7 @@ export default class Dashboard extends React.Component {
 
     render() {
         return (<section id="dashboardContainer">
-            <section id="Header"><h1 class="lpHeaderText">Web Dev Toolkit</h1></section>
+            <section id="Header"><h1 id="dashboardHeaderText">Web Dev Toolkit</h1>
             <section id="navbar"><Link id='navLink' onClick={this.handleLogoutClick} to='/'>
                 Logout
         </Link>
@@ -28,9 +28,10 @@ export default class Dashboard extends React.Component {
         </Link>
                 <form onSubmit={this.handleSearchSubmit}>
                     <input type="text" className="input" name="searchTerm" placeholder="Search..." />
-                    <button type="submit">Search</button>
+                    <button className="searchButton" type="submit">Search</button>
                 </form>
                 <Link id='navLink' to='/dashboard/favorites'>Favorites</ Link></section>
+            </section>
             <section id="mainContentContainer">
                 <Route exact path={'/dashboard'} render={(props) => { return <ResourceTypeList resources={this.props.resources} types={this.props.types} searchTerm={this.props.searchterm} /> }} />
                 <Route path={'/dashboard/resource/:type'} render={(props) => {
@@ -47,9 +48,10 @@ export default class Dashboard extends React.Component {
                     return <ResourceTypePage searchResources={searchResources} searchTerm={searchTerm} resourceTypeName={searchTerm} handleFavoriteButton={this.props.handleFavoriteButton} />
                 }} />
                 <Route path={'/dashboard/favorites'} render={(props) => {
+                    let resourceType = {name: "Favorites"};
                     let favoriteResources = (this.props.resources.filter(resource => resource.favorite));
                     console.log(favoriteResources)
-                    return <ResourceTypePage favoriteResources={favoriteResources} resourceTypeName='Favorites' handleFavoriteButton={this.props.handleFavoriteButton} />
+                    return <ResourceTypePage favoriteResources={favoriteResources} resourceType={resourceType} handleFavoriteButton={this.props.handleFavoriteButton} />
                 }} />
             </section>
         </section>

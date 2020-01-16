@@ -15,11 +15,13 @@ handleURLButton = (resourceURL) => {
     console.log(resources);
     return (
       <section class="LandingContainer">
+        
          <div class="loginFormHeader"><h1 id="HeaderText">Web Dev Toolkit</h1>
           <p>A Web Dev resource one-stop shop. Videos, tutorials, courses, and online utilities amassed in one convenient location.</p>
           <div id="resourceButtons">
             <Link to="/sign-up"><button>Sign Up</button></Link>
             <Link to="/login"><button>Login</button></Link>
+          </div>
           </div>
           <section id="resourceList">
             <div id="lp-resource-component-container" >
@@ -28,7 +30,7 @@ handleURLButton = (resourceURL) => {
               }
           </div>
           </section>
-        </div>
+    
       </section>
     );
 

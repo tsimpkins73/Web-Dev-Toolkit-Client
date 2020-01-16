@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
+@media screen and (max-width: 700px) {
+div#lp-resource-component-container{
+  display: block;
+  padding: initial;
+}
+
+section.LandingContainer,
+main {
+  width: initial;
+  height: 100%;
+  display: inline-block;
+  position: initial;
+}
+
+div.loginFormHeader{
+    height: auto;
+    display: block;
+    position: inherit;
+    padding: 1px;
+  }
+
+}
+
 body{
     position: relative;
     margin-left: auto;
@@ -6,7 +31,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: darkslategrey;
 }
 
 .LoginContainer{

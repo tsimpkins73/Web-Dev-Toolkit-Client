@@ -37,8 +37,8 @@ export default class ResourceTypePreview extends React.Component {
         }
     };
 
-    componentDidUnmount() {
-        this.props.clearSpecialResources();
+    componentWillUnmount() {
+ /*        this.props.clearSpecialResources(); */
     }
 
     componentWillReceiveProps(newProps) {

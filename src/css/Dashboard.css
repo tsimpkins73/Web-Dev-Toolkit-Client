@@ -5,44 +5,64 @@
     width: 100%;
     font-family: 'Roboto Mono', monospace;
     font-size: 2em;
-}
+  }
 
-section#navbar {
+  section#navbar {
     padding-top: 5%;
     padding-bottom: 5%;
-}
+    height: auto;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
 
-section#contenContainer{
+  section#Header {
+    height: auto;
     display: block;
-}
+    position: inherit;
+  }
 
-section#ArticleList{
+  section#contenContainer {
+    display: block;
+  }
+
+  section#resource-component-container {
+    display: block;
+    padding: initial;
+  }
+
+  section#ArticleList {
     display: block;
     z-index: 5;
-}
+  }
 
-section#article{
+  section#article {
     display: block;
     padding: 5%;
     z-index: 5;
-}
+  }
 
 }
+
+
+
+
+
 * {
-    height: 100%;
-    padding: 0;
+  height: 100%;
+  padding: 0;
 }
 
 body {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    vertical-align: middle;
-        align-items: center;
-    justify-content: center;
-    padding: 0;
-    text-align: center;
-    background:#fd735d;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+  background: #fd735d;
 }
 
 header {
@@ -51,10 +71,17 @@ header {
 
 }
 
-#dashboardContainer, main{
-    width: 100vw;
-    height: 100%;
-    display: inline-block;
+#dashboardHeaderText {
+  font-size: 4em;
+  margin: initial;
+  text-shadow: 4px 4px 8px rgb(0, 0, 0, .5);
+}
+
+#dashboardContainer,
+main {
+  width: 100vw;
+  height: 100%;
+  display: inline-block;
 }
 
 #headerTitle {
@@ -67,203 +94,170 @@ header {
 }
 
 div {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  display: block;
 }
 
-#ArticleList{
-    position: absolute;
-    width: 60%;
-    height: auto;
-    left: 0;
-    margin: 0;
-   
+#ArticleList {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  left: 0;
+  margin: 0;
+
 }
 
-h3{
-    height: auto;
+h3 {
+  height: auto;
 }
 
 #Header {
-    width: 100%;
-    height: 200px;
-    margin: 0;
-top:0;
-background: black;
-color: white;
+  position: absolute;
+  width: inherit;
+  height: 200px;
+  margin: 0;
+  top: 0;
+  color: white;
+  background-image: linear-gradient(rgb(255, 188, 111), #fd735d);
 }
 
-h1{
-    height: auto;
-}
-
-navbar {
-    width: 100%;
-}
-
-#navbar {
-    width: 100%;
-    height: 50px;
-    position: sticky;
-    background: rgb(255, 188, 111);
-color: white;
-}
-
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-      monospace;
-  }
-  
-  
-  h3{
-    height: auto;
-  }
-  
-  #Header {
-    width: 100%;
-    height: 200px;
-    margin: 0;
-  top:0;
-  }
-  
-  h1{
-    height: auto;
-  }
-  
-  * {
-    height: 100%;
-    padding: 0;
-  }
-  
-  body {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    vertical-align: middle;
-        align-items: center;
-    justify-content: center;
-    padding: 0;
-    text-align: center;
-  }
-  
-  h3{
-    height: auto;
-  }
-  
-  #Header {
-    width: 100%;
-    height: 200px;
-    margin: 0;
-  top:0;
-  }
-
-  #navLink{
-    color: white;
-    padding: 2%;
+h1 {
+  height: auto;
 }
 
 navbar {
   width: 100%;
-  grid-template-columns: 2fr 2fr 2fr;
 }
-  
-  h1{
-    height: auto;
-  }
-  
-  #navbar {
-    width: 100%;
-    height: 20px;
-    position: sticky;
 
-  }
-  
-  #articleImage{
-    width: 20%;
-    padding: 10px;
-    height: 100px;
-    margin-top: 5%;
-    display: inline-block;
-    }
-  
-  #mainContentContainer {
-    width: 100%;
-    height: auto;
-        margin-top: 0;
+#navbar {
+  width: 100%;
+  height: 70px;
+  position: sticky;
+  padding-top: 2%;
+  background: none;
+  color: white;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-weight: bold;
+  text-shadow: 4px 4px 8px rgb(0, 0, 0, .5);
+}
 
-    display: inline-block;
-  }
+.searchButton {
+  height: auto;
+  padding: 0px 7px;
+  margin: 0px 3px;
+}
 
-  
-  #article-Full {
-    width: 100%;
-    height: 800px;
-    margin: 0;
-    vertical-align: middle;
-    display: inline-block;
-  }
-  
-  #lpArticle {
-    width: 100%;
-    height: 300px;
-    margin-top: 20px;
-    vertical-align: middle;
-    display: inline-block;
-  }
-  
-  #articleText {
-    width: 70%;
-    display: inline-block;
-    height: auto;
-    margin: auto;
-  }
-  
-    
-  input{
-    height: auto;
-    width: auto;
-  }
-  
-  
-  
-  .landing{
-    position: absolute;
-    margin-left: auto;
-    right: 15%;
-    width: 70%;
-    height: auto;
-    display: block;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+}
 
-    text-align: center;
-    }
-  
-  div {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    display: block;
-  }
-  
-  .LoginForm {
-    display: block;
-  }
-  
-  
-  .newestPost {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 90%;
-    height: 100px;
-  }
-  
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+h3 {
+  height: auto;
+}
+
+h1 {
+  height: auto;
+}
+
+
+#navLink {
+  color: white;
+  padding: 2%;
+}
+
+navbar {
+  width: 100%;
+}
+
+
+#mainContentContainer {
+  width: auto;
+  height: auto;
+  margin-top: 0;
+
+  display: inline-block;
+}
+
+
+#article-Full {
+  width: 100%;
+  height: 800px;
+  margin: 0;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#lpArticle {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#articleText {
+  width: 70%;
+  display: inline-block;
+  height: auto;
+  margin: auto;
+}
+
+
+input {
+  height: auto;
+  width: auto;
+}
+
+
+
+.landing {
+  position: absolute;
+  margin-left: auto;
+  right: 15%;
+  width: 70%;
+  height: auto;
+  display: block;
+
+  text-align: center;
+}
+
+div {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  display: block;
+}
+
+.LoginForm {
+  display: block;
+}
+
+
+.newestPost {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 90%;
+  height: 100px;
+}
