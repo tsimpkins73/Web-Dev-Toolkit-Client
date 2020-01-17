@@ -4,16 +4,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import Sidebar from '../Sidebar';
+import ResourceTypeList from '../ResourceTypeList';
 
 
 it('renders without crashing', () => {
-    let articles= [];
-    let categories= [];
-    let handleSearchForm=[];
 
+      let resources = [];
+      let types = []
+       
       const div = document.createElement('div');
-      ReactDOM.render( < BrowserRouter > <Sidebar articles={articles}  handleSearchForm={handleSearchForm} categories={categories} />
+      ReactDOM.render( < BrowserRouter > < ResourceTypeList resources = {
+          resources
+        }
+        types = {
+          types
+        }
+        />
         </BrowserRouter>, div);
 
 

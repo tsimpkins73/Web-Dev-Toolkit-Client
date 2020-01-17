@@ -9,10 +9,10 @@ import LandingPage from '../LandingPage';
 
 it('renders without crashing', () => {
 
-    let lpArticle = [];
+    let resources = [];
 
       const div = document.createElement('div');
-      ReactDOM.render( < BrowserRouter > <LandingPage lpArticle={lpArticle} />
+      ReactDOM.render( < BrowserRouter > <LandingPage resources={resources} />
         </BrowserRouter>, div);
 
 

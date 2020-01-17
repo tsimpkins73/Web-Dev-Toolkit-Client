@@ -4,14 +4,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import ArticlePreview from '../ArticlePreview';
+import ResourceTypePreview from '../ResourceTypePreview';
 
 
 it('renders without crashing', () => {
-  let article= []
-let handleArticleButton = []
+  let resource= {}
+  let resourceType = {name:"test"};
   const div = document.createElement('div');
-  ReactDOM.render(<BrowserRouter> <ArticlePreview article={article} handleArticleButton={handleArticleButton} /> </BrowserRouter>, div);
+  ReactDOM.render(<BrowserRouter> <ResourceTypePreview resourceType={resourceType} resource={resource} /> </BrowserRouter>, div);
 
 
   ReactDOM.unmountComponentAtNode(div);

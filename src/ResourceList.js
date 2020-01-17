@@ -7,10 +7,7 @@ export default class ResourceList extends React.Component {
 
     render() {
         let resourceType = this.props.resourceType
-        if (this.state.showFavorites) {
-            resourceType = this.props.resourceType.filter(resource => resource.data.favorite)
-        }
-        return (
+             return (
             <section id="resourceList">
                 {resourceType.map(function (resource) {
                     return <ResourcePreview resource={resource} />;
