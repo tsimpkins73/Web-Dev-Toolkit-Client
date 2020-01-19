@@ -6,7 +6,6 @@ div#lp-resource-component-container{
   padding: initial;
 }
 
-section.LandingContainer,
 main {
   width: initial;
   height: 100%;
@@ -14,13 +13,36 @@ main {
   position: initial;
 }
 
+section.LandingContainer{
+  position: absolute;
+  margin-left: auto;
+  width: initial;
+  height: auto;
+  display: inline-block;
+  position: initial;
+  text-align: center;
+  vertical-align: middle;
+  padding:2%;
+}
+
 div.loginFormHeader{
     height: auto;
     display: block;
     position: inherit;
     padding: 1px;
+    padding-top: 0;
   }
 
+}
+
+
+.LandingContainer{
+  position: absolute;
+  margin-left: auto;
+  height: auto;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
 }
 
 body{
