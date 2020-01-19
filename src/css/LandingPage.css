@@ -56,12 +56,12 @@ body{
 }
 
 .LoginContainer{
-    width: 70%;
-    height: auto;
-    display: inline-block;
-    text-align: center;
-    padding: 3%;
-    margin-top: 25vh;
+  position: absolute;
+  margin-left: auto;
+  height: auto;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
 }
 
 #lpArticle {

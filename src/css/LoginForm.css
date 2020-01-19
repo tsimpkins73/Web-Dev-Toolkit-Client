@@ -48,6 +48,7 @@ div{
 .LoginForm{
     display: inline-grid;
     grid-template-rows: 1fr 2fr;
+    margin: 0;
 }
 
 .RegistrationForm{
