@@ -42,25 +42,33 @@ export default class ResourceTypePreview extends React.Component {
     }
 
     componentWillReceiveProps(newProps) {
+        console.log(newProps.searchResources);
+       
         if(newProps.favoriteResources){
-            this.setState(this.setState({ typeResources: this.props.favoriteResources }))
-        }if(newProps.searchResources) {
-            this.setState(this.setState({ typeResources: this.props.searchResources }))
-        }if(newProps.resourceType !== this.props.resourceType){
+            this.setState({ typeResources: this.props.favoriteResources })
+        }else if(newProps.searchResources) {
+            if(newProps.searchResources !== this.state.typeResources) {
+                this.setState({ typeResources: newProps.searchResources })
+            }
+            else{
+            this.setState({ typeResources: this.props.searchResources })
+        }
+    }
+        else if(newProps.resourceType !== this.props.resourceType){
             this.getResourcesForTypes(newProps.resourceType.id);
-        }if(this.props.resourceType){
+        }else if(this.props.resourceType){
             this.getResourcesForTypes(this.props.resourceType.id);
         }
         else{
-            this.setState(this.setState({ typeResources: []}))
+            this.setState({ typeResources: []})
         }
 
     }
 
     render(props) {
-        console.log(this.props.resourceType);
         let resourceType = this.state.resourceType;
         let typeResources = this.state.typeResources;
+        console.log(typeResources);
         return (
             <section id="resource-full-container">
                 <h1 class="resource-section-headline">{resourceType}</h1>
