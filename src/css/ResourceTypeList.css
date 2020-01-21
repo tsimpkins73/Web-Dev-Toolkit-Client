@@ -147,7 +147,7 @@ h1{
 }
 
 #viewMoreButton{
-    width: auto;
+    width: 150px;
     height: auto;
     top: 5px;
     vertical-align: middle;
@@ -217,14 +217,3 @@ div {
     display: block;
 }
 
-.LoginForm {
-    display: block;
-}
-
-
-.newestPost {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 90%;
-    height: 100px;
-}

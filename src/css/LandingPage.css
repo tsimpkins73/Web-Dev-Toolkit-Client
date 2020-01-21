@@ -26,7 +26,6 @@ section.LandingContainer{
 }
 
 div.loginFormHeader{
-    height: auto;
     display: block;
     position: inherit;
     padding: 1px;
@@ -43,8 +42,8 @@ div.loginFormHeader{
   display: block;
   text-align: center;
   vertical-align: middle;
-  padding: 3%;
   margin-top: 0;
+  width: 100%;
 }
 
 body{
@@ -62,9 +61,8 @@ body{
     height: auto;
     display: inline-block;
     text-align: center;
-    padding: 3%;
     margin-top: 0;
-    position: absolute;
+    position: initial;
     margin-left: auto;
     vertical-align: middle;
 }
