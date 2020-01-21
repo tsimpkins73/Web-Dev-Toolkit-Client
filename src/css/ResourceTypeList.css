@@ -1,3 +1,18 @@
+@media screen and (max-width: 700px) {
+div#resource-Full{
+    display: block;
+}
+
+div#resource-component-container{
+    display: block;
+    width: initial;
+     }
+
+     button#resourceButton{
+width:auto;
+    }
+
+}
 #ArticleList{
     position: absolute;
     width: 60%;
@@ -48,7 +63,9 @@ h1{
   }
   
   
+  #resourceButton{
 
+  }
   
   #viewMoreButton{
     width: auto;

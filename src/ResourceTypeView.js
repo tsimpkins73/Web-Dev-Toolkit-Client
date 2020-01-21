@@ -13,6 +13,7 @@ handleURLButton = (resourceURL) => {
     render() {
         let resource = this.props.resource;
         let resourceType = this.props.resourceType;
+        console.log(resourceType)
 /*         let typeResources= this.props.typeResources
         let currentResource = resources.filter(resource = resource.id == resourceID)  */
         return (
@@ -23,7 +24,7 @@ handleURLButton = (resourceURL) => {
                         <p id="resourceText">{resource.summary}</p>
                     </div>
                     <div id="resourceButtons">
-               <button onClick={this.handleURLButton.bind(this, resource.url)} >Go to Resource</button><button onClick={this.props.handleFavoriteButton}>Favorite Button</button>
+               <button id="resourceButton" onClick={this.handleURLButton.bind(this, resource.url)} >Go to Resource</button><button id="resourceButton" onClick={this.props.handleFavoriteButton}>Favorite Button</button>
                     </div>
                 </div>
         );
