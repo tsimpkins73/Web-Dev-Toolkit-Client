@@ -11,12 +11,13 @@ handleURLButton = (resourceURL) => {
 }
 
     render() {
-        let resource = this.props.resource
+        let resource = this.props.resource;
+        let resourceType = this.props.resourceType;
 /*         let typeResources= this.props.typeResources
         let currentResource = resources.filter(resource = resource.id == resourceID)  */
         return (
                 <section id="resource-Full">
-                    <div id="resourceImage"><img id="previewImage" alt={"Headline Image for " + resource.headline} src={resource.image} /></div>
+                    <div id="resourceImage"><img id="previewImage" alt={"Headline Image for " + resource.headline} src={resourceType.type_image} /></div>
                     <div id="resourceText">
                         <h3 id="resourceText">{resource.headline}</h3>
                         <p id="resourceText">{resource.summary}</p>

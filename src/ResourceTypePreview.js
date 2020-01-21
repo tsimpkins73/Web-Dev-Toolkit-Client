@@ -35,7 +35,7 @@ export default class ResourceTypePreview extends React.Component {
                 <h1 class="resource-section-headline">{resourceType.name}</h1>
                 <section id="resource-component-container">
                 {typeResources.slice(0, 4).map(function (resource) {
-                    return <ResourceTypeView resource={resource} handleFavoriteButton={() => this.props.handleFavoriteButton(resource)}/>;
+                    return <ResourceTypeView resource={resource} handleFavoriteButton={() => this.props.handleFavoriteButton(resource)} resourceType={resourceType} />;
                 })}
                   </section>
                   <Link to={`/dashboard/resource/${this.props.resourceType.name}`}><button>View All</button></Link>
