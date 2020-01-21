@@ -119,6 +119,11 @@ h1{
     display: inline-block;
 }
 
+#resource-Full{
+    grid-template-rows: 1fr 1fr 0.25fr;
+    display: inline-grid;
+}
+
 #resourceList{
 
     width: auto;
@@ -137,14 +142,6 @@ h1{
     text-align: center;
 }
 
-#resource-full{
-    width: auto;
-    height: auto;
-    margin: auto;
-    vertical-align: middle;
-    display: inline;
-    padding: 2%;
-}
 
 #viewMoreButton{
     width: 150px;
