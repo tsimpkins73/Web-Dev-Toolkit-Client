@@ -89,7 +89,7 @@ h1{
   }
 
 #resourceImage{
-    width: 1fr;
+    width: auto;
     padding: 10px;
     height: 100px;
     margin-top: 5%;
