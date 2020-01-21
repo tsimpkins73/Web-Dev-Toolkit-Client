@@ -12,7 +12,6 @@ handleURLButton = (resourceURL) => {
 
   render() {
     let resources = this.props.resources;
-    console.log(resources);
     return (
       <section class="LandingContainer">
         

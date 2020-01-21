@@ -11,7 +11,6 @@ handleURLButton = (resourceURL) => {
 }
 
     render() {
-        console.log(this.props.resource);
         let resource = this.props.resource
 /*         let typeResources= this.props.typeResources
         let currentResource = resources.filter(resource = resource.id == resourceID)  */

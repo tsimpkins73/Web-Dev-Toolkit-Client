@@ -48,7 +48,6 @@ clearUser = () => {
   
 
   onLoginSuccess = (username) => {
-    console.log(username);
     fetch(`${API_BASE_URL}/users/${username}`)
       .then(response => response.json())
       .then((currentUser) => { 
@@ -91,9 +90,6 @@ clearUser = () => {
   }
 
   render() {
-    console.log(this.state.resources);
-    console.log(this.state.types);
-    console.log(this.state.users);
     return (
     <main className='App'>
       <BrowserRouter>

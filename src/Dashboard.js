@@ -37,20 +37,16 @@ export default class Dashboard extends React.Component {
                 <Route path={'/dashboard/resource/:type'} render={(props) => {
                     let types = this.props.types;
                     let resourceType = (types.find(a => a.name === props.match.params.type));
-                    console.log(resourceType)
                     return <ResourceTypePage resourceType={resourceType} resourceTypeName={resourceType.name} handleFavoriteButton={this.props.handleFavoriteButton} />
                 }} />
                 <Route path={'/dashboard/search/:searchterm'} render={(props) => {
                     const searchTerm = props.match.params.searchterm
-                    console.log(searchTerm)
                     let searchResources = (this.props.resources.filter(resource => resource.summary.indexOf(props.match.params.searchterm) >= 0 || resource.headline.indexOf(props.match.params.searchterm) >= 0));
-                    console.log(searchResources)
                     return <ResourceTypePage searchResources={searchResources} searchTerm={searchTerm} resourceTypeName={searchTerm} handleFavoriteButton={this.props.handleFavoriteButton} />
                 }} />
                 <Route path={'/dashboard/favorites'} render={(props) => {
                     let resourceType = {name: "Favorites"};
                     let favoriteResources = (this.props.resources.filter(resource => resource.favorite));
-                    console.log(favoriteResources)
                     return <ResourceTypePage favoriteResources={favoriteResources} resourceType={resourceType} handleFavoriteButton={this.props.handleFavoriteButton} />
                 }} />
             </section>

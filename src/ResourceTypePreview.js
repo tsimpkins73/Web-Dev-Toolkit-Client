@@ -22,18 +22,14 @@ export default class ResourceTypePreview extends React.Component {
 
       componentDidMount() {
       let resourceType = this.props.resourceType;
-      console.log(resourceType.id);
       this.getResourcesForTypes(resourceType.id);
       }
 
       
 
     render(props) {
-        console.log(this.props.resourceType);
         let resourceType = this.props.resourceType;
         let typeResources = this.state.typeResources;
-        console.log(resourceType);
-        console.log(typeResources);
         return (
             <section id="resource-full-container">
                 <h1 class="resource-section-headline">{resourceType.name}</h1>

@@ -42,7 +42,6 @@ export default class ResourceTypePreview extends React.Component {
     }
 
     componentWillReceiveProps(newProps) {
-        console.log(newProps.searchResources);
        
         if(newProps.favoriteResources){
             this.setState({ typeResources: this.props.favoriteResources })
@@ -68,7 +67,6 @@ export default class ResourceTypePreview extends React.Component {
     render(props) {
         let resourceType = this.state.resourceType;
         let typeResources = this.state.typeResources;
-        console.log(typeResources);
         return (
             <section id="resource-full-container">
                 <h1 class="resource-section-headline">{resourceType}</h1>
