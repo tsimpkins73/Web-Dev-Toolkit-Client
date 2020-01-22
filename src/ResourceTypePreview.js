@@ -32,13 +32,13 @@ export default class ResourceTypePreview extends React.Component {
         let typeResources = this.state.typeResources;
         return (
             <section id="resource-full-container">
-                <h1 class="resource-section-headline">{resourceType.name}</h1>
+                <h1 class="resource-section-headline">{resourceType}</h1>
                 <div id="resource-component-container">
                 {typeResources.slice(0, 4).map(function (resource) {
                     return <ResourceTypeView resource={resource} handleFavoriteButton={() => this.props.handleFavoriteButton(resource)} resourceType={resourceType} />;
                 })}
                   </div>
-                  <Link to={`/dashboard/resource/${this.props.resourceType.name}`}><button>View All</button></Link>
+                  <Link to={`/dashboard/resource/${resourceType}`}><button>View All</button></Link>
             </section>
         );
     }

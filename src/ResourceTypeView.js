@@ -19,8 +19,8 @@ export default class ResourceTypeView extends React.Component {
         if (commonTypes.includes(resourceType)) {
             return (
                 <div id="resource-Full">
-                    <div id="resourceText">
                     <div id="resourceImage"><img id="previewImage" alt={"Headline Image for " + resource.headline} src={"/images/" + resourceType + ".svg"} /></div>
+                    <div id="resourceText">
                         <h3 id="resourceText">{resource.headline}</h3>
                         <p id="resourceText">{resource.summary}</p>
                     </div>

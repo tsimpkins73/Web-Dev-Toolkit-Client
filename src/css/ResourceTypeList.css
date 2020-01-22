@@ -79,6 +79,8 @@ font-size:2em;
 .resource-section-headline{
     font-size: 2em;
     color: white;
+    margin: 0;
+    text-shadow: 4px 4px 8px rgb(0, 0, 0, .5);
 }
 
   #resource-full-container{
@@ -107,10 +109,9 @@ font-size:2em;
         display: flex;
     }
     #previewImage {
-        width: 200px;
+        width: 50%;
         height: auto;
-        display: flex;
-        object-fit: cover;
+        display: initial;
     }
 
 
@@ -123,7 +124,7 @@ font-size:2em;
 }
 
 #resource-Full{
-    grid-template-rows: 1fr 1fr 0.25fr;
+    grid-template-rows: .5fr 1fr 0.25fr;
     display: inline-grid;
 }
 
