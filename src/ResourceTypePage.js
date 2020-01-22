@@ -72,7 +72,7 @@ export default class ResourceTypePreview extends React.Component {
                 <h1 class="resource-section-headline">{resourceType}</h1>
                 <section id="resource-component-container">
                     {typeResources.map(function (resource) {
-                        return <ResourceTypeView resource={resource} handleFavoriteButton={() => this.props.handleFavoriteButton(resource)} />;
+                        return <ResourceTypeView resource={resource}  resourceType={resourceType} handleFavoriteButton={() => this.props.handleFavoriteButton(resource)} />;
                     })}
                 </section>
             </section>

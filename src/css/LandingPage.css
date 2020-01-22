@@ -46,6 +46,13 @@ div.loginFormHeader{
   width: 100%;
 }
 
+#lp-resourceImage{
+  width: auto;
+  padding: 10px;
+  height: auto;
+  display: inline-block;
+  }
+
 body{
     position: relative;
     margin-left: auto;

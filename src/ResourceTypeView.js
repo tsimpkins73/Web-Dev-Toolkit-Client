@@ -5,29 +5,44 @@ import { Link } from 'react-router-dom';
 
 export default class ResourceTypeView extends React.Component {
 
-handleURLButton = (resourceURL) => {
-        window.location.href= resourceURL;
-    
-}
+    handleURLButton = (resourceURL) => {
+        window.location.href = resourceURL;
+
+    }
 
     render() {
         let resource = this.props.resource;
         let resourceType = this.props.resourceType;
-        console.log(resourceType)
-/*         let typeResources= this.props.typeResources
-        let currentResource = resources.filter(resource = resource.id == resourceID)  */
-        return (
+        let commonTypes = ['Tutorials', 'Courses', 'Videos', 'Utilities']
+        /*         let typeResources= this.props.typeResources
+                let currentResource = resources.filter(resource = resource.id == resourceID)  */
+        if (commonTypes.includes(resourceType)) {
+            return (
                 <div id="resource-Full">
-                    <div id="resourceImage"><img id="previewImage" alt={"Headline Image for " + resource.headline} src={resourceType.type_image} /></div>
+                    <div id="resourceImage"><img id="previewImage" alt={"Headline Image for " + resource.headline} src={"/images/" + resourceType + ".svg"} /></div>
                     <div id="resourceText">
                         <h3 id="resourceText">{resource.headline}</h3>
                         <p id="resourceText">{resource.summary}</p>
                     </div>
                     <div id="resourceButtons">
-               <button id="resourceButton" onClick={this.handleURLButton.bind(this, resource.url)} >Go to Resource</button><button id="resourceButton" onClick={this.props.handleFavoriteButton}>Favorite Button</button>
+                        <button onClick={this.handleURLButton.bind(this, resource.url)} >Go to Resource</button><button onClick={this.props.handleFavoriteButton}>Favorite Button</button>
                     </div>
                 </div>
-        );
+            );
+        }
+        else {
+            return (
+                <div id="resource-Full">
+                    <div id="resourceText">
+                        <h3 id="resourceText">{resource.headline}</h3>
+                        <p id="resourceText">{resource.summary}</p>
+                    </div>
+                    <div id="resourceButtons">
+                        <button onClick={this.handleURLButton.bind(this, resource.url)} >Go to Resource</button><button onClick={this.props.handleFavoriteButton}>Favorite Button</button>
+                    </div>
+                </div>
+            );
+        }
     }
 }
 

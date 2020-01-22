@@ -8,6 +8,7 @@ export default class ResourceList extends React.Component {
     render() {
         let types = this.props.types
         let resources= this.props.resources
+        console.log(types)
         if (this.props.searchterm) {
             resources = this.props.resources.filter(resource => resource.text.indexOf(this.props.searchterm) >= 0)
         }

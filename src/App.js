@@ -90,13 +90,14 @@ clearUser = () => {
   }
 
   render() {
+    let types = this.state.types;
     return (
     <main className='App'>
       <BrowserRouter>
-        <Route exact path={'/'} render={(props) => <LandingPage {...props} resources={this.state.resources}  handleFavoriteButton={this.handleFavoriteButton} clearUser={this.clearUser} currentresource={this.state.currentArticle} />} />
+        <Route exact path={'/'} render={(props) => <LandingPage {...props} resources={this.state.resources} types={types} handleFavoriteButton={this.handleFavoriteButton} clearUser={this.clearUser} currentresource={this.state.currentArticle} />} />
         <Route path={'/login'} render={(props) => <LoginForm onLoginSuccess={this.onLoginSuccess} {...props} />} />
           <Route path={'/sign-up'} component={SignUpForm} />
-        <Route path={'/dashboard'} render={(props) => <Dashboard {...props} handleArticleButton={this.handleArticleButton} users={this.state.users} resources={this.state.resources} types={this.state.types} searchterm={this.state.searchterm} currentUser={this.state.currentUser} types={this.state.types} handleSearchForm={this.handleSearchForm} handleFavoriteButton={this.handleFavoriteButton} clearUser={this.clearUser} currentresource={this.state.currentArticle} />} />
+        <Route path={'/dashboard'} render={(props) => <Dashboard {...props} handleArticleButton={this.handleArticleButton} users={this.state.users} resources={this.state.resources} types={types} searchterm={this.state.searchterm} currentUser={this.state.currentUser} types={this.state.types} handleSearchForm={this.handleSearchForm} handleFavoriteButton={this.handleFavoriteButton} clearUser={this.clearUser} currentresource={this.state.currentArticle} />} />
       </BrowserRouter>
     </main>
   );

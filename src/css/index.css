@@ -187,7 +187,6 @@ div {
 
 button, .resource-button {
   display: inline-block;
-  width: auto;
   padding: 5px;
   margin-top: 20px;
   margin-bottom: 10px;
