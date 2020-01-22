@@ -37,8 +37,6 @@ export default class Dashboard extends React.Component {
                 <Route path={'/dashboard/resource/:type'} render={(props) => {
                     let types = this.props.types;
                     let resourceType = (types.find(a => a.name === props.match.params.type));
-                    console.log(types);
-                    console.log(resourceType);
                     return <ResourceTypePage resourceType={resourceType} resourceTypeName={resourceType.name} handleFavoriteButton={this.props.handleFavoriteButton} />
                 }} />
                 <Route path={'/dashboard/search/:searchterm'} render={(props) => {

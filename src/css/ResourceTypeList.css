@@ -71,6 +71,9 @@ h1{
     padding: 3%;
   }
 
+ #resourceTypeHeadline{
+font-size:2em;
+  }
   
 
 .resource-section-headline{
@@ -121,6 +124,11 @@ h1{
 
 #resource-Full{
     grid-template-rows: 1fr 1fr 0.25fr;
+    display: inline-grid;
+}
+
+#lp-resource-Full{
+    grid-template-rows: 1fr 1fr;
     display: inline-grid;
 }
 

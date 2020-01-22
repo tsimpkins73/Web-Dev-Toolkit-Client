@@ -7,6 +7,10 @@
     font-size: 2em;
   }
 
+  h1#dashboardHeaderText {
+    font-size: auto;
+  }
+
   section#navbar {
     padding-top: 5%;
     padding-bottom: 5%;
@@ -16,7 +20,7 @@
     grid-template-columns: 1fr;
   }
 
-  section#Header {
+  section#Header, div#loginFormHeader {
     height: auto;
     display: block;
     position: inherit;
