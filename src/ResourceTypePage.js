@@ -29,7 +29,7 @@ export default class ResourceTypePreview extends React.Component {
         }
         if (this.props.randomResources) {
             this.setState({ typeResources: this.props.randomResources,
-            resourceType:"Favorites" })
+            resourceType:"Random" })
         }
         if (this.props.searchTerm) {
             this.setState({ typeResources: this.props.searchResources,
