@@ -62,6 +62,10 @@ div{
 
 }
 
+#loginParagraph{
+    padding:2%;
+}
+
 
 .loginFormHeader{
     width: 100%;

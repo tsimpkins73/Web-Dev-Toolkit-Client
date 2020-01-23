@@ -27,6 +27,10 @@ export default class ResourceTypePreview extends React.Component {
             this.setState({ typeResources: this.props.favoriteResources,
             resourceType:"Favorites" })
         }
+        if (this.props.randomResources) {
+            this.setState({ typeResources: this.props.randomResources,
+            resourceType:"Favorites" })
+        }
         if (this.props.searchTerm) {
             this.setState({ typeResources: this.props.searchResources,
             resourceType:"Results"})
@@ -52,6 +56,12 @@ export default class ResourceTypePreview extends React.Component {
             else{
             this.setState({ typeResources: this.props.searchResources })
         }
+    }else if (newProps.randomResources) {
+        if(newProps.randomResources !== this.state.typeResources) {
+            this.setState({ typeResources: newProps.randomResources })
+        }
+        this.setState({ typeResources: this.props.randomResources,
+        resourceType:"Favorites" })
     }
         else if(newProps.resourceType !== this.props.resourceType){
             this.getResourcesForTypes(newProps.resourceType.id);

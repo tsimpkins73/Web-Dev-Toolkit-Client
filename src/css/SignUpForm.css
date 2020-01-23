@@ -30,6 +30,7 @@ div {
 .SignUpForm {
     display: inline-grid;
     height: 70vh;
+    width: 100%;
 }
 
 .newestPost {

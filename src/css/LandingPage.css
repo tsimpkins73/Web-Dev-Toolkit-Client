@@ -22,7 +22,6 @@ section.LandingContainer{
   position: initial;
   text-align: center;
   vertical-align: middle;
-  padding:2%;
 }
 
 div.loginFormHeader{
@@ -49,9 +48,16 @@ div.loginFormHeader{
 #lp-resourceImage{
   width: auto;
   padding: 10px;
-  height: auto;
+  height: 100px;
   display: inline-block;
   }
+
+
+  #lp-resource-Full{
+    grid-template-rows: 0fr 0fr 0fr;
+    display: inline-grid;
+    margin: 0 4%;
+}
 
 body{
     position: relative;

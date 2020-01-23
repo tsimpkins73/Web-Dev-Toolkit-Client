@@ -38,7 +38,7 @@ export default class ResourceTypePreview extends React.Component {
                     return <ResourceTypeView resource={resource} handleFavoriteButton={() => this.props.handleFavoriteButton(resource)} resourceType={resourceType} />;
                 })}
                   </div>
-                  <Link to={`/dashboard/resource/${resourceType}`}><button>View All</button></Link>
+                  <Link to={`/dashboard/resource/${resourceType}`}><button id="viewMoreButton">View All</button></Link>
             </section>
         );
     }

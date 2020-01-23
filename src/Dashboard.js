@@ -30,7 +30,8 @@ export default class Dashboard extends React.Component {
                     <input type="text" className="input" name="searchTerm" placeholder="Search..." />
                     <button className="searchButton" type="submit">Search</button>
                 </form>
-                <Link id='navLink' to='/dashboard/favorites'>Favorites</ Link></section>
+                <Link id='navLink' to='/dashboard/favorites'>Favorites</ Link>
+                <Link id='navLink' to='/dashboard/random'>Random</ Link></section>
             </section>
             <section id="mainContentContainer">
                 <Route exact path={'/dashboard'} render={(props) => { return <ResourceTypeList resources={this.props.resources} types={this.props.types} searchTerm={this.props.searchterm} /> }} />
@@ -48,6 +49,16 @@ export default class Dashboard extends React.Component {
                     let resourceType = {name: "Favorites"};
                     let favoriteResources = (this.props.resources.filter(resource => resource.favorite));
                     return <ResourceTypePage favoriteResources={favoriteResources} resourceType={resourceType} handleFavoriteButton={this.props.handleFavoriteButton} />
+                }} />
+                 <Route path={'/dashboard/random'} render={(props) => {
+                    let resourceType = {name: "Random"};
+                    let randomResources = [];
+                    for(let i=0; i<10; i++){
+                        const randomNumber = Math.floor(Math.random()* (this.props.resources.length))
+                        randomResources.push(this.props.resources[randomNumber])
+                    }
+                    console.log(randomResources)
+                    return <ResourceTypePage randomResources={randomResources} resourceType={resourceType} handleFavoriteButton={this.props.handleFavoriteButton} />
                 }} />
             </section>
         </section>

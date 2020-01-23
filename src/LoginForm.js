@@ -36,7 +36,7 @@ export default class LoginForm extends React.Component {
         <div class="LoginForm" > 
         <div class="loginFormHeader">
           <h1 class="lpHeaderText"> Welcome, Please Sign In! </h1>
-         <p> Guests, please login with 
+         <p id="loginParagraph"> Guests, please login with 
            Username: webdev@webdevtoolkit.com and Password: Password35!</p>
          </div>
                     <form onSubmit={this.handleSubmitJwtAuth} className='RegistrationForm' >
