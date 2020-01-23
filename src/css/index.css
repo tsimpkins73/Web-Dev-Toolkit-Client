@@ -197,7 +197,7 @@ button, .resource-button {
   border-style: none;
   text-decoration: none;
   font-style: initial;
-  width: auto;
+  width: 100%;
 }
 a:link, a:visited{
   text-decoration: none;
