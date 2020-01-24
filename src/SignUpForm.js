@@ -11,6 +11,8 @@ export default class SignUpForm extends React.Component {
 
     state = { error: null }
 
+
+/* This functions posts the new user to the API and uses that user to login */    
     handleSubmit = ev => {
         ev.preventDefault()
         const { name, username, password } = ev.target

@@ -1,68 +1,98 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Web Dev Toolkit
 
-## Available Scripts
+## https://web-dev-toolkit-client.now.sh/
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Landing Page
+![Image of landing Page](https://i.imgur.com/kOUeLwu.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Sign Up Page
+![Image of Sign Up Page]https://i.imgur.com/GrQ5MmE.png)
 
-### `npm test`
+### Dashboard
+![Image of Dashboard](https://i.imgur.com/4GPI1zB.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Article View
+![Image of Favorites View](https://i.imgur.com/alajI1j.png)
 
-### `npm run build`
+### Add Random View
+![Image of Random View](https://i.imgur.com/Yba4CTC.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### What is Web Dev Toolkit?
 
-### `npm run eject`
+Web Dev Toolkit is an aggregated resoucre hub. This app makes it easy for Web Developers to find learning and working resourcs in one location. The resources are grouped together based upon their type; Tutorials, Course, Videos, and Utilities. This app allows authorized users to visit a variety of web development resources, save favorite resources, and search through resources to find specific content.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### What built Web Dev Toolkit?
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Web Dev Toolkit client was built using React and vanilla HTML & CSS. It utilizes React-Router and other functions to navigate through content choices and maniupulation.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Web Dev Toolkit API was built using Node, PostgreSQL, knex, and Express. It also utilizes chai & Mocha as testing methods.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+# Web Dev Toolkit API Documentation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### GET Get All Resources
+https://web-dev-toolkit-api.herokuapp.com/api/resources
+https://web-dev-toolkit-api.herokuapp.com/api/resources
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Example Request
+Get All Resources
+curl --location --request GET 'https://web-dev-toolkit-api.herokuapp.com/api/resources'
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### GET Get Resources by Type ID
+https://web-dev-toolkit-api.herokuapp.com/api/resources/byType/1
+https://web-dev-toolkit-api.herokuapp.com/api/resources/byType/1
 
-### Analyzing the Bundle Size
+Example Request
+Get Resources by Type ID
+curl --location --request GET 'https://web-dev-toolkit-api.herokuapp.com/api/resources/byType/1'
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+### GET Get All Types
+https://web-dev-toolkit-api.herokuapp.com/api/types
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Example Request
+Get All Types
+curl --location --request GET 'https://web-dev-toolkit-api.herokuapp.com/api/types'
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### POST Login
+https://web-dev-toolkit-api.herokuapp.com/api/auth/login
+https://web-dev-toolkit-api.herokuapp.com/api/auth/login
 
-### Deployment
+HEADERS
+Content-Typeapplication/json
+BODY raw
+username: webdev@webdevtoolkit.com,
+password: Password35!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Example Request
+Login
+curl --location --request POST 'https://web-dev-toolkit-api.herokuapp.com/api/auth/login' \
+--header 'Content-Type: application/json' \
+--data-raw 'username: webdev@webdevtoolkit.com,
+password: Password35!'
 
-### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### POST Submit User
+https://web-dev-toolkit-api.herokuapp.com/api/users
+https://web-dev-toolkit-api.herokuapp.com/api/users
+
+HEADERS
+Content-Typeapplication/json
+BODY raw
+username: webdev2@webdevtoolkit.com,
+password: Password35!,
+name: Web Dev 2
+
+Example Request
+Submit User
+curl --location --request POST 'https://web-dev-toolkit-api.herokuapp.com/api/users' \
+--header 'Content-Type: application/json' \
+--data-raw 'username: webdev2@webdevtoolkit.com,
+password: Password35!,
+name: Web Dev 2'

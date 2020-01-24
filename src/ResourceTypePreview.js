@@ -13,13 +13,16 @@ export default class ResourceTypePreview extends React.Component {
         };
       }
 
-
+ /* This function are to retrieve data from the API and fill the state */  
     getResourcesForTypes = (typeID) => {
         fetch(`${API_BASE_URL}/resources/byType/${typeID}`)
           .then(response => response.json())
           .then((typeResources) => { this.setState({ typeResources }); });
       }
 
+
+
+/* These functions are what to run when the component mounts */              
       componentDidMount() {
       let resourceType = this.props.resourceType;
       this.getResourcesForTypes(resourceType.id);

@@ -6,6 +6,7 @@ import UserService from './services/user-service'
 export default class LoginForm extends React.Component {
   state = { error: null }
 
+/* This functions authorizes the user logging in */  
   handleSubmitJwtAuth = ev => {
     ev.preventDefault()
     this.setState({ error: null })

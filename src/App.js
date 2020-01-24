@@ -23,13 +23,9 @@ export default class App extends React.Component {
     };
   }
 
+  /* APP STATE ADJUSTING FUNCTIONS */
 
-
-clearUser = () => {
-  this.setState({currentUser:{}});
-  localStorage["user"]= 'null';
-}
-
+  /* These functions are all button handlers */
 
   handleFavoriteButton = (article) => {
     article.favorite = !article.favorite;
@@ -45,61 +41,63 @@ clearUser = () => {
       searchterm: term
     });
   }
-  
+
+
+/* These functions pertain to logging in and out */
+  clearUser = () => {
+    this.setState({ currentUser: {} });
+    localStorage["user"] = 'null';
+  }
 
   onLoginSuccess = (username) => {
     fetch(`${API_BASE_URL}/users/${username}`)
       .then(response => response.json())
-      .then((currentUser) => { 
-        this.setState({ currentUser }); 
-        localStorage["user"]= JSON.stringify(currentUser)
-     });
+      .then((currentUser) => {
+        this.setState({ currentUser });
+        localStorage["user"] = JSON.stringify(currentUser)
+      });
   }
 
-/*   getResourcesForTypes = () => {
-    fetch(`${API_BASE_URL}/resourcesTypes/`)
-      .then(response => response.json())
-      .then((typeResources) => { this.setState({ typeResources }); });
-  } */
 
+ /* These functions are to retrieve data from the API and fill the state */  
   getResources() {
     fetch(`${API_BASE_URL}/resources`)
       .then(response => response.json())
       .then((resources) => { this.setState({ resources }); });
   }
-    getTypes() {
-       fetch(`${API_BASE_URL}/types`)
+  getTypes() {
+    fetch(`${API_BASE_URL}/types`)
       .then(response => response.json())
       .then((types) => { this.setState({ types }); });
   }
 
   getUsers() {
     fetch(`${API_BASE_URL}/users`)
-   .then(response => response.json())
-   .then((users) => { this.setState({ users }); });
-}
+      .then(response => response.json())
+      .then((users) => { this.setState({ users }); });
+  }
 
   componentDidMount() {
     this.getResources();
     this.getTypes();
     this.getUsers();
-    if(localStorage["user"]){
+    if (localStorage["user"]) {
       const user = JSON.parse(localStorage["user"]);
-      this.setState({currentUser: user});
+      this.setState({ currentUser: user });
     }
   }
 
   render() {
     let types = this.state.types;
     return (
-    <main className='App'>
-      <BrowserRouter>
-        <Route exact path={'/'} render={(props) => <LandingPage {...props} resources={this.state.resources} types={types} handleFavoriteButton={this.handleFavoriteButton} clearUser={this.clearUser} currentresource={this.state.currentArticle} />} />
-        <Route path={'/login'} render={(props) => <LoginForm onLoginSuccess={this.onLoginSuccess} {...props} />} />
+      <main className='App'>
+        <BrowserRouter>
+          <Route exact path={'/'} render={(props) => <LandingPage {...props} resources={this.state.resources} types={types} handleFavoriteButton={this.handleFavoriteButton} clearUser={this.clearUser} currentresource={this.state.currentArticle} />} />
+          <Route path={'/login'} render={(props) => <LoginForm onLoginSuccess={this.onLoginSuccess} {...props} />} />
           <Route path={'/sign-up'} component={SignUpForm} />
-        <Route path={'/dashboard'} render={(props) => <Dashboard {...props} handleArticleButton={this.handleArticleButton} users={this.state.users} resources={this.state.resources} types={types} searchterm={this.state.searchterm} currentUser={this.state.currentUser} types={this.state.types} handleSearchForm={this.handleSearchForm} handleFavoriteButton={this.handleFavoriteButton} clearUser={this.clearUser} currentresource={this.state.currentArticle} />} />
-      </BrowserRouter>
-    </main>
-  );
-}
+          <Route path={'/dashboard'} render={(props) => <Dashboard {...props} handleArticleButton={this.handleArticleButton} users={this.state.users} resources={this.state.resources} types={types} searchterm={this.state.searchterm} currentUser={this.state.currentUser} types={this.state.types} handleSearchForm={this.handleSearchForm} handleFavoriteButton={this.handleFavoriteButton} clearUser={this.clearUser} currentresource={this.state.currentArticle} />} />
+        </BrowserRouter>
+      </main>
+    );
+  }
 }

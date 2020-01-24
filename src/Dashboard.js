@@ -6,10 +6,16 @@ import './css/Dashboard.css'
 import TokenService from './services/token-service'
 
 export default class Dashboard extends React.Component {
+    
+    
+    /* This function pertains to logging out */
     handleLogoutClick = () => {
         TokenService.clearAuthToken();
         this.props.clearUser();
     }
+
+
+    /* This function handles submission of the search form */
     handleSearchSubmit = (e) => {
         this.props.handleSearchForm(e)
         const url = '/dashboard/search/' + e.currentTarget.searchTerm.value;

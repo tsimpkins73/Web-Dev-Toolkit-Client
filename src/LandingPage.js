@@ -5,6 +5,7 @@ import './css/LandingPage.css'
 
 export default class LandingPage extends React.Component {
 
+  /* This function takes the user to the origin of the resource */
   handleURLButton = (resourceURL) => {
     window.location.href = resourceURL;
 

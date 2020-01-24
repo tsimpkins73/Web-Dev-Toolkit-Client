@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 
 export default class ResourceTypeView extends React.Component {
 
+    
+  /* This function takes the user to the origin of the resource */
     handleURLButton = (resourceURL) => {
         window.location.href = resourceURL;
 
@@ -14,8 +16,6 @@ export default class ResourceTypeView extends React.Component {
         let resource = this.props.resource;
         let resourceType = this.props.resourceType;
         let commonTypes = ['Tutorials', 'Courses', 'Videos', 'Utilities']
-        /*         let typeResources= this.props.typeResources
-                let currentResource = resources.filter(resource = resource.id == resourceID)  */
         if (commonTypes.includes(resourceType)) {
             return (
                 <div id="resource-Full">

@@ -14,13 +14,16 @@ export default class ResourceTypePreview extends React.Component {
         };
     }
 
-
+ /* These functions are to retrieve data from the API and fill the state */  
     getResourcesForTypes = (typeID) => {
         fetch(`${API_BASE_URL}/resources/byType/${typeID}`)
             .then(response => response.json())
             .then((typeResources) => { this.setState({ typeResources }); });
     }
 
+
+
+/* These functions are what to run when the component mounts and when it receives new props */        
     componentDidMount() {
         let resourceType = this.props.resourceType;
         if (this.props.favoriteResources) {
@@ -40,10 +43,6 @@ export default class ResourceTypePreview extends React.Component {
             this.setState({ resourceType: this.props.resourceType.name })
         }
     };
-
-    componentWillUnmount() {
- /*        this.props.clearSpecialResources(); */
-    }
 
     componentWillReceiveProps(newProps) {
        

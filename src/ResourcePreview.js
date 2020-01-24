@@ -7,7 +7,6 @@ export default class ResourcePreview extends React.Component {
 
 
     render(props) {
-        // id= {this.props.resource.id};
         let type = this.props.type;
         let resource = this.props.resource;
             return(
